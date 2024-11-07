@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>VIEW GUST</h1>
+    <table border="8">
+        <tr>
+            <th>NAME</th>
+            <th>CHECK IN DATE</th>
+            <th>HOTEL NAME</th>
+            <th>LOCATION</th>
+        </tr>
+        <tr>
+            {% for i in value %}
+            <td>{{i.gust_name}}</td>
+            <td>{{i.check_in}}</td>
+            <td>{{i.hotels}}</td>
+            <td>{{i.hotels.location}}</td>
+            <td><a href="{% url 'iid' i.id %}">update</a></td>
+            <td><a href="{% url 'gid' i.id %}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

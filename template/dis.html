@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>emp_id</th>
+            <th>emp_name</th>
+            <th>phone_number</th>
+            <th>address</th>
+        
+        </tr>
+        {% for x in disp %}
+        <tr>
+            <td>{{x.emp_id}}</td>
+            <td>{{x.emp_name}}</td>
+            <td>{{x.phone}}</td>
+            <td>{{x.address}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

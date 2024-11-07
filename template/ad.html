@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+       {% csrf_token %}
+
+       <label for="proid">product id</label>
+       <input type="text" name="proidd" required><br>
+       
+       <label for="proname">product name</label>
+       <input type="text" name="proname" required><br>
+
+       <label for="user">user</label>
+       <select name="user_id">
+        {% for x in data %}
+        <option value="{{x.id}}">{{x.name}}</option>
+        {% endfor %}
+       </select>
+       <button type="submit">add</button>
+
+        
+
+        </tr>
+    </form>
+</body>
+</html>

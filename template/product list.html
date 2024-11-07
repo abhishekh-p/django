@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for x in item %}
+    <h1>{{x.name}}</h1>
+    <h2>{{x.price}}</h2>
+    {% if x.status %}
+     <span style ="color: green;">in stock</span>
+    {% else %}
+      <span style ="color: red;">out of stock</span>
+    {% endif %}
+    {% endfor  %}
+</body>
+</html>

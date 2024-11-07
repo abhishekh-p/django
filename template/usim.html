@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Card</title>
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 20px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .card img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .card .container {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+{% for x in data %}
+<div class="card">
+    <img src="{{x.image.url}}" alt="User Image">
+    <h1 class="name">{{x.name}}</h1>
+    <h1 class="age">{{x.age}}</h1>
+   
+</div>
+
+{% endfor %}
+</body>
+</html>

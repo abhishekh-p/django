@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="5">
+        <tr>
+            <th>username</th>
+            <th>date of birth</th>
+            <th>location</th>
+            <th>bio</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.user_name}}</td>
+            <td>{{i.date_of_birth}}</td>
+            <td>{{i.location}}</td>
+            <td>{{i.bio}}</td>
+            <td><a href="{% url 'pid' i.id %}">update</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

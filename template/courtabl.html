@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="5">
+        <tr>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>email</th>
+            <th>COURSE</th>
+        </tr>
+        {% for i in data1 %}
+        <tr>
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.stdns.course_name}}</td>
+            <td><a href="{% url 'upid' i.id %}">update</a></td>
+        
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
